@@ -7,11 +7,11 @@ class RoboOkta < Formula
 
   if OS.mac?
     url "https://github.com/adisx06x/robo-okta/releases/download/v1.0.1/robo-okta_1.0.1_Darwin_x86_64.tar.gz"
-    sha256 "4a36363deb214283cc1d9dc9e4c641b12abf7988692ed469b6c2064188037018"
+    sha256 "eff6ae3dea5ecccd1df6da05419971a1807e6eb342497d4e6c39c148fe358a3a"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/adisx06x/robo-okta/releases/download/v1.0.1/robo-okta_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "6782ce31156f6df3e289427c293dc59e69ddbff30d73c31d89be5c1e0751f35b"
+      sha256 "1549356df7a193c05c87b9ce2915649cd47e3ba7794bc8dcfc57496cfd88c323"
     end
   end
 
