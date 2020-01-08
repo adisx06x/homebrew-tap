@@ -2,9 +2,18 @@
 class RoboOkta < Formula
   desc "A CLI to automate cumbersome Okta UI tasks"
   homepage ""
-  url "https://github.com/adisx06x/robo-okta/releases/download/v1.0.0/robo-okta_1.0.0_Darwin_x86_64.tar.gz"
-  version "1.0.0"
-  sha256 "dfa373441d1ecffbc582d0897239e9bd411907219897c5cba824d378dd291411"
+  version "1.0.1"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/adisx06x/robo-okta/releases/download/v1.0.1/robo-okta_1.0.1_Darwin_x86_64.tar.gz"
+    sha256 "37da890dee7c772adcd953aa7b97b9372af75a86b6bef0672f45e6994779ced7"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/adisx06x/robo-okta/releases/download/v1.0.1/robo-okta_1.0.1_Linux_x86_64.tar.gz"
+      sha256 "1dc6849b995bae0e65af733f923a32dc713fa6e9c1d6d8e8d625ee0270fbe65b"
+    end
+  end
 
   def install
     bin.install "robo-okta"
